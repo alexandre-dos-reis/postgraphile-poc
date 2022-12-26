@@ -1,0 +1,26 @@
+{
+  "name": "postgraphile-tuto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "start:dev": "nodemon dist/index.js",
+    "dev": "concurrently -n tsc,nodemon -c \"blue.bold,magenta.bold\" \"pnpm build\" \"pnpm start:dev\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@graphile-contrib/pg-simplify-inflector": "^6.1.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^3.x.x",
+    "postgraphile": "^4.12.12"
+  }
+}
